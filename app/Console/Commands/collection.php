@@ -38,10 +38,9 @@ class collection extends Command
      */
     public function handle()
     {
-        // $data = [['price' => 3000, "tax" => 100, 'active' => false], ['price' => 300, "tax" => 200, 'active' => true]];
-        // echo  collect($data)->min('price');
-        $data = [1, 2, 3];
+        $collection = collect(["key" => "value 1", "key 2" => "value 2"]);
 
-        echo collect($data)->combine(["100" => 123, "256785678" => 345, "577799" => 123]);
+        $collection->mapWithKeys(function ($item, $key) {
+        });
     }
 }
