@@ -38,9 +38,12 @@ class collection extends Command
      */
     public function handle()
     {
-        $collection = collect(["key" => "value 1", "key 2" => "value 2"]);
-
-        $collection->mapWithKeys(function ($item, $key) {
-        });
+        $collection = collect([
+            ['product' => "apple", "price" => 59],
+            ['product' => "apple", "price" => 69],
+            ['product' => "Samsung", "price" => 40],
+            ['product' => "Samsung", "price" => 50]
+        ]);
+        echo $collection->pluck('price');
     }
 }
